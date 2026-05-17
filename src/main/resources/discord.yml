@@ -1,0 +1,12 @@
+# ==========================================================================
+# Discord Placeholder
+# ==========================================================================
+discord:
+  enabled: true
+
+  # Discord invite, accepts full URL or just the code
+  invite: "https://discord.gg/example"
+
+  # How often to refresh the member count, in seconds. Min 60.
+  # Discord rate-limits invite checks, so don't set this too low.
+  refresh-interval: 300

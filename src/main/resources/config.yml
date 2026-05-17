@@ -1,0 +1,18 @@
+settings:
+  dev-mode: false # verbose logging
+  update-checker: true # check for plugin updates
+  metrics: true # anonymous stats
+  discord-enabled: true # discord checker in discord.yml
+
+commands:
+  lobbycore:
+    enabled: true
+    permission: "lobbycore.admin"
+  discord:
+    enabled: true
+    permission: "" # empty = no perm required
+  store:
+    enabled: true
+    permission: ""
+
+config-version: 1 # don't touch

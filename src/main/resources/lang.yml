@@ -1,0 +1,40 @@
+# ==========================================================================
+# Language Configuration
+# All messages support MiniMessage formatting:
+# https://docs.advntr.dev/minimessage/format.html
+# ==========================================================================
+
+# Prefix prepended to every message.
+prefix: "&#00C6FBLobby &7⏵ "
+
+# ==========================================================================
+# Command Messages
+# ==========================================================================
+no-permission: "&fYou don't have permissions for that."
+usage: "&fUsage: &#00C6FB/lobbycore <reload>"
+
+reload-success: "&fThe Configuration has been reloaded!"
+reload-failed: "&fError whilst reloading the config &7(%error%)"
+
+# ==========================================================================
+# Store & Discord Commands
+# ==========================================================================
+discord-message:
+  - ""
+  - "<#00C6FB>✉ <#00C6FB><bold>DISCORD SERVER"
+  - ""
+  - "<white>Join the Discord Community, for"
+  - "<white>Giveaways, Updates and much more!"
+  - ""
+  - "<#00C6FB>● <white>Link: <click:open_url:https://discord.gg/example><#00C6FB><u>discord.gg/example"
+  - ""
+
+store-message:
+  - ""
+  - "<#65FCBF>$ <#65FCBF><bold>SERVER STORE"
+  - ""
+  - "<white>Support the Server, by buying"
+  - "<white>some perks, ranks and more!"
+  - ""
+  - "<#65FCBF>● <white>Link: <click:open_url:https://store.example.com><#65FCBF><u>store.example.com"
+  - ""

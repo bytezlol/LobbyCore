@@ -1,0 +1,55 @@
+package net.pikzstudios;
+
+import com.tcoded.folialib.FoliaLib;
+import lombok.Getter;
+import lombok.SneakyThrows;
+import net.pikzstudios.command.DiscordCommand;
+import net.pikzstudios.command.LobbyCommand;
+import net.pikzstudios.command.StoreCommand;
+import net.pikzstudios.manager.DiscordManager;
+import net.pikzstudios.utils.ConfigUtil;
+import net.pikzstudios.utils.FileUtil;
+import net.pikzstudios.utils.PlaceholderUtil;
+import org.bukkit.plugin.java.JavaPlugin;
+
+@Getter
+public final class LobbyCore extends JavaPlugin {
+
+    @Getter
+    private static LobbyCore instance;
+
+    private FoliaLib foliaLib;
+    private DiscordManager discordManager;
+
+    public LobbyCore() {
+        instance = this;
+    }
+
+    @SneakyThrows
+    @Override
+    public void onEnable() {
+        FileUtil.load("config.yml");
+        FileUtil.load("discord.yml");
+        FileUtil.load("lang.yml");
+
+        if (ConfigUtil.devMode()) {
+            getLogger().info("Developer mode is enabled!");
+        }
+
+        this.foliaLib = new FoliaLib(this);
+        this.discordManager = new DiscordManager();
+
+        new LobbyCommand();
+        new DiscordCommand();
+        new StoreCommand();
+        
+        PlaceholderUtil.bootstrap();
+    }
+
+    @Override
+    public void onDisable() {
+        PlaceholderUtil.shutdown();
+        if (discordManager != null) discordManager.shutdown();
+        if (foliaLib != null) foliaLib.getScheduler().cancelAllTasks();
+    }
+}

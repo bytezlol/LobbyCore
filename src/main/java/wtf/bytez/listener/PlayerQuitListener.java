@@ -1,13 +1,15 @@
 package wtf.bytez.listener;
 
-import io.papermc.paper.event.player.AsyncChatEvent;
+import net.kyori.adventure.text.Component;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.jetbrains.annotations.NotNull;
 
 import wtf.bytez.LobbyCore;
+import wtf.bytez.utils.ColorUtil;
+import wtf.bytez.utils.ConfigUtil;
+import wtf.bytez.utils.MessageUtil;
 
 public class PlayerQuitListener implements Listener {
 
@@ -17,10 +19,13 @@ public class PlayerQuitListener implements Listener {
 
     @EventHandler
     public void onPlayerQuit(final @NotNull PlayerQuitEvent event) {
-    }
+        if (!ConfigUtil.leaveEnabled()) {
+            event.quitMessage(Component.empty());
+            return;
+        }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
-    public void onChat(final @NotNull AsyncChatEvent event) {
-        final var player = event.getPlayer();
+        final String raw = MessageUtil.getRaw("leave-message");
+        final String formatted = raw.replace("%player%", event.getPlayer().getName());
+        event.quitMessage(ColorUtil.parse(formatted));
     }
 }

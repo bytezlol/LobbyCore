@@ -35,6 +35,22 @@ public final class ConfigUtil {
         return config().getBoolean("settings.discord-enabled", true);
     }
 
+    public static boolean joinEnabled() {
+        return config().getBoolean("settings.join-enabled", true);
+    }
+
+    public static boolean leaveEnabled() {
+        return config().getBoolean("settings.leave-enabled", true);
+    }
+
+    public static boolean chatEnabled() {
+        return config().getBoolean("settings.chat-enabled", true);
+    }
+
+    public static @NotNull String chatFormat() {
+        return config().getString("settings.chat-format", "{prefix}<gray>{name} <dark_gray>» <white>{message}");
+    }
+
     public static boolean commandEnabled(final @NotNull String command) {
         return config().getBoolean("commands." + command + ".enabled", true);
     }

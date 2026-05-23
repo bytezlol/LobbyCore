@@ -4,6 +4,20 @@ settings:
   metrics: true # anonymous stats
   discord-enabled: true # discord checker in discord.yml
 
+  join-enabled: true # show join broadcast
+  leave-enabled: true # show leave broadcast
+  chat-enabled: true # override vanilla chat format
+
+  # Chat format. Placeholders:
+  # {prefix} - LuckPerms prefix (empty if LuckPerms not installed)
+  # {suffix} - LuckPerms suffix
+  # {name} - Player name
+  # {world} - Current world name
+  # {message} - The player's actual message
+  # MiniMessage tags and hex colors supported.
+  # PlaceholderAPI placeholders work too (if installed).
+  chat-format: "{prefix}<gray>{name} <dark_gray>» <white>{message}"
+
 commands:
   lobbycore:
     enabled: true

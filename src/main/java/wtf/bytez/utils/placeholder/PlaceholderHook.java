@@ -16,7 +16,7 @@ public class PlaceholderHook extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getAuthor() {
-        return "USpigot";
+        return "bytezlol";
     }
 
     @Override

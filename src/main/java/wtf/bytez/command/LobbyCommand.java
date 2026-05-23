@@ -54,6 +54,7 @@ public class LobbyCommand implements CommandExecutor, TabCompleter {
         try {
             FileUtil.reloadAll();
             LobbyCore.getInstance().getDiscordManager().reload();
+            LobbyCore.getInstance().getChatFormatManager().reload();
         } catch (Exception e) {
             MessageUtil.send(sender, "reload-failed", Map.of("%error%", String.valueOf(e.getMessage())));
             return;

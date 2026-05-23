@@ -19,9 +19,6 @@ public final class FileUtil {
     private static final Map<String, FileConfiguration> LOADED = new ConcurrentHashMap<>();
     private static final Map<String, File> FILES = new ConcurrentHashMap<>();
 
-    private FileUtil() {
-    }
-
     public static void load(final @NotNull String name) {
         final File file = new File(LobbyCore.getInstance().getDataFolder(), name);
 

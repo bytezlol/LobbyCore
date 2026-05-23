@@ -5,7 +5,7 @@
 # ==========================================================================
 
 # Prefix prepended to every message.
-prefix: "&#00C6FBLobby &7⏵ "
+prefix: "&#00C6FB&lLOBBY &7» "
 
 # ==========================================================================
 # Command Messages
@@ -15,6 +15,14 @@ usage: "&fUsage: &#00C6FB/lobbycore <reload>"
 
 reload-success: "&fThe Configuration has been reloaded!"
 reload-failed: "&fError whilst reloading the config &7(%error%)"
+
+# ==========================================================================
+# Join & Leave Messages
+# Note: 'prefix' above is NOT prepended to these — use full styling here.
+# Placeholder: %player%
+# ==========================================================================
+join-message: "<dark_gray>[<#00C6FB>+<dark_gray>] <gray>%player%"
+leave-message: "<dark_gray>[<#FC1F3C>-<dark_gray>] <gray>%player%"
 
 # ==========================================================================
 # Store & Discord Commands

@@ -6,6 +6,10 @@ import lombok.SneakyThrows;
 import wtf.bytez.command.DiscordCommand;
 import wtf.bytez.command.LobbyCommand;
 import wtf.bytez.command.StoreCommand;
+import wtf.bytez.listener.PlayerChatListener;
+import wtf.bytez.listener.PlayerJoinListener;
+import wtf.bytez.listener.PlayerQuitListener;
+import wtf.bytez.manager.ChatFormatManager;
 import wtf.bytez.manager.DiscordManager;
 import wtf.bytez.utils.ConfigUtil;
 import wtf.bytez.utils.FileUtil;
@@ -20,6 +24,7 @@ public final class LobbyCore extends JavaPlugin {
 
     private FoliaLib foliaLib;
     private DiscordManager discordManager;
+    private ChatFormatManager chatFormatManager;
 
     public LobbyCore() {
         instance = this;
@@ -38,11 +43,16 @@ public final class LobbyCore extends JavaPlugin {
 
         this.foliaLib = new FoliaLib(this);
         this.discordManager = new DiscordManager();
+        this.chatFormatManager = new ChatFormatManager();
 
         new LobbyCommand();
         new DiscordCommand();
         new StoreCommand();
-        
+
+        new PlayerJoinListener();
+        new PlayerQuitListener();
+        new PlayerChatListener();
+
         PlaceholderUtil.bootstrap();
     }
 

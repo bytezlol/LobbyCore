@@ -24,11 +24,11 @@ public final class ColorUtil {
     }
 
     public static @NotNull Component parse(final @NotNull String input) {
-        return MiniMessage.miniMessage().deserialize(translate(input)).decoration(TextDecoration.ITALIC, false);
+        return MiniMessage.miniMessage().deserialize(toMiniMessage(input)).decoration(TextDecoration.ITALIC, false);
     }
 
-    private static @NotNull String translate(final @NotNull String input) {
-        return convertLegacy(convertHex(input));
+    public static @NotNull String toMiniMessage(final @NotNull String input) {
+        return convertUrls(convertLegacy(convertHex(input)));
     }
 
     private static @NotNull String convertHex(final @NotNull String input) {
@@ -49,5 +49,26 @@ public final class ColorUtil {
         }
         matcher.appendTail(builder);
         return builder.toString();
+    }
+
+    private static @NotNull String convertUrls(final @NotNull String input) {
+        final Matcher matcher = Pattern.compile("(?<!['\"])(?:https?://)?([a-zA-Z0-9\\-]+\\.[a-zA-Z]{2,})(/[^\\s<>\"']*)?(\\s|$)").matcher(input);
+        final StringBuilder builder = new StringBuilder();
+        while (matcher.find()) {
+            final String full = matcher.group(0).stripTrailing();
+            final String url = full.startsWith("http") ? full : "https://" + full;
+            final String trailing = matcher.group(3) != null ? matcher.group(3) : "";
+            matcher.appendReplacement(builder, Matcher.quoteReplacement("<click:open_url:'" + url + "'>" + full + "</click>" + trailing));
+        }
+        matcher.appendTail(builder);
+        return builder.toString();
+    }
+
+    public static @NotNull String stripLegacyCodes(final @NotNull String input) {
+        return input.replaceAll("[&§][0-9a-fk-orA-FK-OR]", "");
+    }
+
+    public static @NotNull String stripHexCodes(final @NotNull String input) {
+        return input.replaceAll("[&§]#[0-9a-fA-F]{6}", "").replaceAll("[&§]x([&§][0-9a-fA-F]){6}", "");
     }
 }

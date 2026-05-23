@@ -2,10 +2,10 @@ name: LobbyCore
 version: '${version}'
 main: wtf.bytez.LobbyCore
 api-version: '1.21'
-author: USpigot
-description: Lobby management plugin for the Lobby Setup by Pikz.
+author: bytezlol
+description: Lobby management plugin to make your life easier
 folia-supported: true
-softdepend: [ PlaceholderAPI ]
+softdepend: [LuckPerms, PlaceholderAPI]
 
 commands:
   lobbycore:
@@ -14,5 +14,8 @@ commands:
 
 permissions:
   lobbycore.admin:
-    description: admin access to lobbycore commands.
     default: op
+  lobbycore.chat.colors:
+    default: false
+  lobbycore.chat.rgb:
+    default: false

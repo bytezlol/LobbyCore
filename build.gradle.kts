@@ -5,8 +5,8 @@ plugins {
     alias(libs.plugins.run.paper)
 }
 
-group = "com.zorathstudios"
-version = "1.0"
+group = "wtf.bytez"
+version = "1.1"
 
 repositories {
     mavenLocal()
@@ -25,10 +25,7 @@ dependencies {
 
     implementation(libs.folialib)
     compileOnly(libs.placeholderapi)
-
-    compileOnly(libs.vault) {
-        exclude(group = "org.bukkit", module = "bukkit")
-    }
+    compileOnly(libs.luckperms)
 }
 
 tasks {
@@ -49,7 +46,7 @@ tasks {
         archiveFileName = "${rootProject.name}-${project.version}.jar"
         archiveClassifier = null
 
-        relocate("com.tcoded.folialib", "com.zorathstudios.libs.folialib")
+        relocate("com.tcoded.folialib", "wtf.bytez.libs.folialib")
 
         manifest {
             attributes["Implementation-Version"] = rootProject.version

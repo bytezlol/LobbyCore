@@ -4,6 +4,9 @@ settings:
   metrics: true # anonymous stats
   discord-enabled: true # discord checker in discord.yml
 
+  join-enabled: true # displays player joins
+  leave-enabled: true # displays player quits
+
 commands:
   lobbycore:
     enabled: true

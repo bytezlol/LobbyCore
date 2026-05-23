@@ -16,6 +16,9 @@ usage: "&fUsage: &#00C6FB/lobbycore <reload>"
 reload-success: "&fThe Configuration has been reloaded!"
 reload-failed: "&fError whilst reloading the config &7(%error%)"
 
+player-join: "&#8AFF78%player% &fhas joined the server."
+player-quit: "&#00FF00%player% &fhas joined the server."
+
 # ==========================================================================
 # Store & Discord Commands
 # ==========================================================================

@@ -1,4 +1,4 @@
-package net.pikzstudios.utils;
+package wtf.bytez.utils;
 
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
@@ -7,9 +7,10 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import net.pikzstudios.*;
-import net.pikzstudios.utils.placeholder.*;
-import net.pikzstudios.utils.placeholder.impl.*;
+import wtf.bytez.LobbyCore;
+import wtf.bytez.utils.placeholder.Placeholder;
+import wtf.bytez.utils.placeholder.PlaceholderHook;
+import wtf.bytez.utils.placeholder.impl.Discord;
 
 public final class PlaceholderUtil {
 

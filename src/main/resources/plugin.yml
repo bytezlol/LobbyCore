@@ -1,6 +1,6 @@
 name: LobbyCore
 version: '${version}'
-main: net.pikzstudios.LobbyCore
+main: wtf.bytez.LobbyCore
 api-version: '1.21'
 author: USpigot
 description: Lobby management plugin for the Lobby Setup by Pikz.

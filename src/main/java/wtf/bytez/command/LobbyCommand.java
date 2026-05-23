@@ -1,9 +1,9 @@
-package net.pikzstudios.command;
+package wtf.bytez.command;
 
-import net.pikzstudios.LobbyCore;
-import net.pikzstudios.utils.ConfigUtil;
-import net.pikzstudios.utils.FileUtil;
-import net.pikzstudios.utils.MessageUtil;
+import wtf.bytez.LobbyCore;
+import wtf.bytez.utils.ConfigUtil;
+import wtf.bytez.utils.FileUtil;
+import wtf.bytez.utils.MessageUtil;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

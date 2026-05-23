@@ -1,4 +1,4 @@
-package net.pikzstudios.utils;
+package wtf.bytez.utils;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;

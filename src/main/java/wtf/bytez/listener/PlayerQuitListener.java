@@ -1,4 +1,4 @@
-package net.pikzstudios.listener;
+package wtf.bytez.listener;
 
 import io.papermc.paper.event.player.AsyncChatEvent;
 import org.bukkit.event.EventHandler;
@@ -7,7 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.jetbrains.annotations.NotNull;
 
-import net.pikzstudios.LobbyCore;
+import wtf.bytez.LobbyCore;
 
 public class PlayerQuitListener implements Listener {
 

@@ -1,10 +1,10 @@
-package net.pikzstudios.manager;
+package wtf.bytez.manager;
 
 import com.tcoded.folialib.wrapper.task.WrappedTask;
 import lombok.Getter;
-import net.pikzstudios.LobbyCore;
-import net.pikzstudios.utils.ConfigUtil;
-import net.pikzstudios.utils.FileUtil;
+import wtf.bytez.LobbyCore;
+import wtf.bytez.utils.ConfigUtil;
+import wtf.bytez.utils.FileUtil;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

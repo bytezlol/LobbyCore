@@ -1,8 +1,8 @@
-package net.pikzstudios.utils.placeholder.impl;
+package wtf.bytez.utils.placeholder.impl;
 
-import net.pikzstudios.LobbyCore;
-import net.pikzstudios.manager.DiscordManager;
-import net.pikzstudios.utils.placeholder.Placeholder;
+import wtf.bytez.LobbyCore;
+import wtf.bytez.manager.DiscordManager;
+import wtf.bytez.utils.placeholder.Placeholder;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

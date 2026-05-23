@@ -1,4 +1,4 @@
-package net.pikzstudios.utils.placeholder;
+package wtf.bytez.utils.placeholder;
 
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;

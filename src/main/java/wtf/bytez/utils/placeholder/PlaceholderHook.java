@@ -1,8 +1,8 @@
-package net.pikzstudios.utils.placeholder;
+package wtf.bytez.utils.placeholder;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
-import net.pikzstudios.LobbyCore;
-import net.pikzstudios.utils.PlaceholderUtil;
+import wtf.bytez.LobbyCore;
+import wtf.bytez.utils.PlaceholderUtil;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

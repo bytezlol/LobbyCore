@@ -1,4 +1,4 @@
-package net.pikzstudios.utils;
+package wtf.bytez.utils;
 
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;

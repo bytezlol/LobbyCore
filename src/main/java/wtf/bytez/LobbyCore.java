@@ -1,15 +1,15 @@
-package net.pikzstudios;
+package wtf.bytez;
 
 import com.tcoded.folialib.FoliaLib;
 import lombok.Getter;
 import lombok.SneakyThrows;
-import net.pikzstudios.command.DiscordCommand;
-import net.pikzstudios.command.LobbyCommand;
-import net.pikzstudios.command.StoreCommand;
-import net.pikzstudios.manager.DiscordManager;
-import net.pikzstudios.utils.ConfigUtil;
-import net.pikzstudios.utils.FileUtil;
-import net.pikzstudios.utils.PlaceholderUtil;
+import wtf.bytez.command.DiscordCommand;
+import wtf.bytez.command.LobbyCommand;
+import wtf.bytez.command.StoreCommand;
+import wtf.bytez.manager.DiscordManager;
+import wtf.bytez.utils.ConfigUtil;
+import wtf.bytez.utils.FileUtil;
+import wtf.bytez.utils.PlaceholderUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter

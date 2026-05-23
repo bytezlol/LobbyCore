@@ -1,6 +1,6 @@
-package net.pikzstudios.utils;
+package wtf.bytez.utils;
 
-import net.pikzstudios.LobbyCore;
+import wtf.bytez.LobbyCore;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;

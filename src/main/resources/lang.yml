@@ -11,10 +11,17 @@ prefix: "&#00C6FBLobby &7⏵ "
 # Command Messages
 # ==========================================================================
 no-permission: "&fYou don't have permissions for that."
-usage: "&fUsage: &#00C6FB/lobbycore <reload>"
+admin-usage: "&fUsage: &#00C6FB/lobbycore <reload>"
 
 reload-success: "&fThe Configuration has been reloaded!"
 reload-failed: "&fError whilst reloading the config &7(%error%)"
+
+lobby-set-usage: "&fUsage: &#00C6FB/setlobby"
+lobby-set-success: "&#8AFF78Successfully &fset the lobby point."
+
+no-lobby-location: "&cLobby location has not been set yet."
+teleport-usage: "&fUsage: &#00C6FB/lobby"
+teleport-success: "&#8AFF78Successfully &fteleported to the lobby point."
 
 player-join: "&#8AFF78%player% &fhas joined the server."
 player-quit: "&#00FF00%player% &fhas joined the server."

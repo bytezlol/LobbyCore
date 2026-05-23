@@ -1,0 +1,3 @@
+# This file stores the lobby spawn location
+# Format: world,x,y,z,yaw,pitch
+lobby: ""

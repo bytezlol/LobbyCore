@@ -11,6 +11,8 @@ commands:
   lobbycore:
   discord:
   store:
+  setlobby:
+  lobby:
 
 permissions:
   lobbycore.admin:

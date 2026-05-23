@@ -17,5 +17,12 @@ commands:
   store:
     enabled: true
     permission: ""
+  setlobby:
+    enabled: true
+    permission: "lobbycore.admin"
+  lobby:
+    enabled: true
+    permission: ""
+
 
 config-version: 1 # don't touch

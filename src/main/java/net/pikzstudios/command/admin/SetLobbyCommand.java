@@ -1,57 +1,48 @@
-package net.pikzstudios.command;
+package net.pikzstudios.command.admin;
 
 import net.pikzstudios.LobbyCore;
 import net.pikzstudios.manager.LobbyManager;
 import net.pikzstudios.utils.ConfigUtil;
 import net.pikzstudios.utils.MessageUtil;
-import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Map;
 import java.util.Objects;
 
 /**
- * LobbyCommand
+ * SetLobbyCommand
  *
  * @author Kai
  * @since 5/23/2026
  */
-public class LobbyCommand implements CommandExecutor {
+public class SetLobbyCommand implements CommandExecutor {
 
-    private final LobbyManager lobbyManager = LobbyManager.getInstance();
-
-    public LobbyCommand() {
-        Objects.requireNonNull(LobbyCore.getInstance().getCommand("lobby")).setExecutor(this);
+    public SetLobbyCommand() {
+        Objects.requireNonNull(LobbyCore.getInstance().getCommand("setlobby")).setExecutor(this);
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, @NotNull String @NotNull [] args) {
-        if (!ConfigUtil.commandEnabled("lobby")) return true;
+        if (!ConfigUtil.commandEnabled("setlobby")) return true;
         if (!(sender instanceof final Player player)) return false;
 
-        final String permission = ConfigUtil.commandPermission("lobby");
+        final String permission = ConfigUtil.commandPermission("setlobby");
         if (!permission.isEmpty() && !sender.hasPermission(permission)) {
             MessageUtil.send(sender, "no-permission");
             return true;
         }
 
-        final Location lobbyLocation = lobbyManager.getLobbyLocation();
-
-        if (lobbyLocation == null) {
-            MessageUtil.send(sender, "no-lobby-location");
-            return true;
-        }
-
         if (args.length == 0) {
-            player.teleport(lobbyLocation);
-            MessageUtil.send(player, "teleport-success");
+            LobbyManager.getInstance().saveLobby(player);
+            MessageUtil.send(sender, "lobby-set-success");
             return true;
         }
 
-        MessageUtil.send(player, "teleport-usage");
+        MessageUtil.send(sender, "setlobby-usage");
         return true;
     }
-}
+ }
